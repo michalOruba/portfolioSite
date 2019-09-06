@@ -30,12 +30,12 @@ const skillsDescription = {
 	skill1: {
 		desc:
 			'<p>Po raz pierwszy miałem styczność z Node.Js podczas kursu internetowego, którego produktem końcowym była aplikacja YelpCamp.</p>' +
-			'<p>Realizując projekt nauczyłem się obsługi aplikacji z poziomu serwera, instalacji pakietów, korzystania z frameworku Express, szablonowania EJS, obsługi bazy danych MongoDb przy pomocy Mongoose, uwierzytelniania dzięki Passport, czy tworzenia ścieżek RESTful.</p>'
+			'<p>Realizując projekt nauczyłem się obsługi aplikacji z poziomu serwera, instalacji pakietów, korzystania z frameworku Express, szablonowania EJS, obsługi bazy danych MongoDB przy pomocy Mongoose, uwierzytelniania dzięki Passport, czy tworzenia ścieżek RESTful.</p>'
 	},
 	skill2: {
 		desc:
 			'<p>Każdy z realizowanych do tej pory projektów zawiera interfejs użytkownika, co pozwoliło mi zapoznać się z podstawami składni HTML oraz CSS.</p>' +
-			'<p>Strona Kancelarii została stworzona w czystym pliku CSS. W kolejnych projektach starałem się wykorzystywać Sass (SCSS).</p>'
+			'<p>Strona Kancelarii została stworzona w czystej składni CSS. W kolejnych projektach starałem się wykorzystywać Sass (SCSS).</p>'
 	},
 	skill3: {
 		desc:
@@ -52,13 +52,13 @@ const skillsDescription = {
 		desc:
 			'<p>Wykorzystałem tę nierelacyjną bazę danych do stworzenia aplikacji mobilnej na urządzenia z systemem Android w ramach pracy inżynierskiej.</p>' +
 			'<p>Charakteryzuje się ona tym, że znajduje się w chmurze oraz pozwala na synchronizację danych w czasie rzeczywistym za pomocą realtime listeners u wszystkich Klientów.</p>' +
-			'<p>Baza Firebase zostanie również przeze mnie wykorzystana przy realizacji części webowej dla Niezbędnika Turystycznego.</p>'
+			'<p>Baza Firebase zostanie również przeze mnie wykorzystana przy realizacji części webowej Niezbędnika Turystycznego.</p>'
 	},
 	skill6: {
 		desc:
 			'Swoich sił w programowaniu aplikacji na platformę Android rozpocząłem na początku 2017 r. Niestety w programie studiów nie było ono przewidziane, dlatego uczyłem się na własną rękę.</p>' +
-			'<p>Jako jedna z kilku tysięcy osób z całego świata zakwalifikowałem się jako uczestnik kursu internetowego organizowanego przez Google i dzięki temu poznałem podstawy.</p>' +
-			'<p>Mając już pewne doświadczenie zdecydowałem się na stworzenie aplikacji na smartfony w ramach pracy inżynierskiej. </p>' +
+			'<p>Jako jedna z kilku tysięcy osób z całego świata zostałem zakwalifikowany do uczestnictwa w kursie internetowym organizowanym przez Google i dzięki temu poznałem podstawy tworzenia aplikacji.</p>' +
+			'<p>Mając już pewne doświadczenie zdecydowałem się na stworzenie własnej aplikacji na smartfony w ramach pracy inżynierskiej. </p>' +
 			'<p>Realizując projekt zdobyłem doświadczenie w programowaniu obiektowym, tworzeniu interfejsu użytkownika oraz obsłudze bazy danych Firestore.'
 	}
 };
