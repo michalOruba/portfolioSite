@@ -123,7 +123,7 @@ p a:hover {
   color: #fff;
   opacity: 0;
   margin-top: 100px;
-  animation: 1s slidefade 1s forwards;
+  animation: 1s slidefade 3s forwards;
 }
 
 .landing-content h1 {
@@ -143,13 +143,19 @@ p a:hover {
 }
 
 div .sidebar {
-  padding-top: 20px;
+  background: #000000;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #434343, #000000);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #434343, #000000);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding-top: 10vh;
   position: sticky;
   left: 0;
   top: 0;
   height: 100vh;
   text-decoration: none;
-  color: #000;
+  color: #fff;
 }
 
 div .sidebar nav {
@@ -159,28 +165,31 @@ div .sidebar nav {
 
 div .sidebar a {
   font-size: 1.3rem;
-  color: #000;
+  color: #fff;
   opacity: 0.75;
   transition: padding-left 0.5s;
+  padding-bottom: 3vh;
 }
 
 div .sidebar a:hover {
   text-decoration: none;
-  color: #000;
+  color: #fff;
   opacity: 1;
   padding-left: 15px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 992px) {
   div .sidebar {
+    background: #000000;
+    /* fallback for old browsers */
     height: auto;
     margin: 0;
-    padding: 0;
+    padding: 23px 0 0 0;
     opacity: 1;
     z-index: 2;
   }
   div .sidebar nav {
-    height: 50px;
+    height: 30px;
     align-items: center;
     flex-direction: row;
     justify-content: space-around;
@@ -197,62 +206,117 @@ div .sidebar a:hover {
   }
 }
 
+#_about {
+  margin-top: 10vh;
+}
+
 .about-content {
   font-size: 2rem;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 992px) {
   .about-content {
     font-size: 1.2rem;
   }
 }
 
+#project-img-1 {
+  background-image: url(../img/kancelaria.JPG);
+}
+
+#project-img-2 {
+  background-image: url(../img/yelpcamp.JPG);
+}
+
+#project-img-3 {
+  background-image: url(../img/portfolio.jpg);
+  transition: background-image 1s ease-in-out;
+}
+
+#project-img-3:hover {
+  background-image: url(../img/IMG_ME.jpg);
+}
+
+#project-img-4 {
+  background-image: url(https://source.unsplash.com/QBLq7dY0uo8);
+  transition: background-image 1s ease-in-out;
+}
+
+#_projects {
+  margin-top: 15vh;
+}
+
+#_projects ul {
+  list-style: disc;
+  margin-left: 10vw;
+}
+
+#_projects a {
+  text-decoration: none;
+  color: #000;
+  opacity: 0.75;
+}
+
+#_projects a:hover {
+  text-decoration: none;
+  opacity: 1;
+}
+
+#_projects i {
+  text-align: center;
+  background-color: #fff;
+  color: #000;
+}
+
 .main-container {
   display: flex;
-  width: 100vw;
-  height: 100vh;
+  width: 70vw;
+  height: 70vh;
   align-items: center;
+  flex-wrap: nowrap;
 }
 
 .main-container .main-content {
   display: flex;
   flex-direction: column;
   align-items: start;
-  width: 70%;
-  height: 70%;
-  z-index: 1;
+  justify-content: center;
+  padding: 20px;
   opacity: 0;
-  flex: 1 1 70%;
 }
 
 .main-container .main-img {
   display: flex;
   align-items: center;
   z-index: 0;
-  height: 80%;
-  width: 30%;
+  border-radius: 4%;
+  max-width: auto;
+  height: 100%;
   opacity: 0;
-  flex: 1 1 30%;
-}
-
-.main-container .main-img img {
-  border-radius: 8%;
-  max-width: 100%;
-  height: auto;
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }
 
 .slide-from-right {
-  margin-left: 100px;
-  animation: 1s slidefade 0.5s forwards;
+  margin-top: 100px;
 }
 
 .slide-from-left {
-  margin-right: 100px;
+  margin-top: 100px;
+}
+
+.animation.animate {
   animation: 1s slidefade 0.5s forwards;
+}
+
+#_skills {
+  margin-top: 15vh;
 }
 
 .skill {
   text-align: center;
+  color: #fff;
   position: absolute;
   height: 20vh;
   width: 20vh;
@@ -260,50 +324,99 @@ div .sidebar a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: blue;
+  background: #000000;
+  cursor: pointer;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #5e5d5d, #000000);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #5e5d5d, #000000);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   border: 1px solid black;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
+}
+
+.skill:hover {
+  -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+  -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+  box-shadow: inset 0px 0px 5px #c1c1c1;
+}
+
+a.dropdown-item.active,
+a.dropdown-item:active {
+  background-color: #545b62;
+}
+
+a.dropdown-item:hover {
+  background-color: #545b62;
+  opacity: 0.9;
+  color: #fff;
+}
+
+#skill-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #skill-container {
-  height: 80vh;
+  height: 70vh;
   position: relative;
-  background-color: red;
 }
 
 #skill1 {
   top: 40%;
   left: 36%;
-  z-index: 8;
+  z-index: 6;
 }
 
 #skill2 {
   top: 38%;
   left: 33%;
-  z-index: 7;
+  z-index: 5;
 }
 
 #skill3 {
   top: 36%;
   left: 33%;
-  z-index: 5;
+  z-index: 4;
 }
 
 #skill4 {
   top: 34%;
   left: 36%;
-  z-index: 4;
+  z-index: 3;
 }
 
 #skill5 {
   top: 36%;
   left: 39%;
-  z-index: 3;
+  z-index: 2;
 }
 
 #skill6 {
   top: 38%;
   left: 39%;
   z-index: 1;
+}
+
+#_contact {
+  margin-top: 15vh;
+}
+
+#_contact a {
+  text-decoration: none;
+}
+
+#contact-content-container {
+  height: 30vh;
+}
+
+#copy-button {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+#copy-button:hover {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .clickable {
@@ -321,4 +434,11 @@ i {
   height: 50px;
   width: 50px;
   text-align: center;
+}
+
+hr.style-two {
+  color: black;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.75), transparent);
 }

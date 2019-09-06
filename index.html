@@ -14,7 +14,7 @@
     <title>Michał Oruba | Portfolio Site</title>
   </head>
   <body>
-    <section class="landing">
+    <section id="landing-section" class="landing">
         <ul class="background-image">
             <li></li>
             <li></li>
@@ -25,53 +25,120 @@
         <div class="landing-content">
             <h1>Michał Oruba</h1>
             <h3>Programista Node.JS</h3>
-            <a href="#about" class="btn">Zapraszam</a>
+            <a id="landing-button" href="#_about" class="btn">Zapraszam</a>
         </div>
     </section>
 
 
-    <section class="main px-3">
-        <div class="row flex-column flex-md-row">
-            <div class="col-md-2 sidebar">
+    <section id="main-section" class="main px-3" style="display: none">
+        <div class="row flex-column flex-lg-row">
+            <div class="col-lg-2 sidebar">
                 <nav>
-                    <a href="#about">O mnie</a>
-                    <a href="#projects">Projekty</a>
-                    <a href="#skills">Umiejętności</a>
-                    <a href="#contact">Kontakt</a>
+                    <a href="#_about">O mnie</a>
+                    <a href="#_projects">Projekty</a>
+                    <a href="#_skills">Umiejętności</a>
+                    <a href="#_contact">Kontakt</a>
                 </nav>
             </div>
-            <div class="col-md-10 mx-0">
-                <section id="about" class="mt-3">
+            <div class="col-lg-10 mx-0">
+                <section id="_about" class="d-flex flex-column">
+                    <h1 class="text-right pr-5">O mnie</h1>
+                    <hr class="style-two">
                     <div class="main-container container">
-                        <div class="main-content slide-from-left about-content">
+                        <div class="main-content slide-from-left animation animate about-content">
                             <p>Dzień dobry, nazywam się <em>Michał Oruba</em>, a ta strona to moje portfolio.</p>
-                            <p>W ciągu kilku lat nabyłem doświadczenie w różnych dziedzinach. Byłem sprzedawcą, magazynierem, konsultantem infolinii oraz programistą aplikacji desktopowych, opartych na VBA oraz MS SQL. </p>
+                            <p class="pb-4">W ciągu kilku lat nabyłem doświadczenie w różnych dziedzinach. Byłem sprzedawcą, magazynierem, konsultantem infolinii oraz programistą aplikacji desktopowych, opartych na VBA oraz MS SQL. </p>
                             <p>Obecnie, po ukończeniu Informatyki na Uniwersytecie Śląskim w Katowicach, chcę zostać programistą <em>Node.JS</em>.</p>
-                            <p>Zapraszam do zapoznania się z pozostałymi częściami strony, aby sprawdzić jak mi to <a href="#projects">wychodzi</a>.</p>
+                            <p>Zapraszam do zapoznania się z pozostałymi częściami strony, aby sprawdzić <a href="#_projects">rezultaty</a>.</p>
                         </div>
                     </div>
                 </section>
-                <section id="projects">
-                    <div class="main-container container">
-                        <div class="main-img slide-from-left">
-                            <img src="./assets/img/kancelaria.JPG" alt="">
-                        </div>
-                        <div class="d-flex main-content slide-from-right pr-3 align-items-center">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti quaerat natus incidunt esse nisi labore. Ullam dolorum deserunt, reprehenderit accusantium debitis pariatur, quidem mollitia nobis veritatis voluptatibus ducimus eum porro fuga dicta optio, iste earum odio! Eos assumenda voluptatibus, omnis, voluptatum ab eum magni error a debitis placeat explicabo animi!</p>
+                <section id="_projects" class="d-flex flex-column">
+                    <h1 class="text-right pr-5">Projekty</h1>
+                    <hr class="style-two">
+                    <div class="col-12 main-container container row order-1 mb-5">
+                        <div id="project-img-1" class="col-12 col-lg-4 main-img slide-from-left animation order-2 order-lg-1"></div>
+                        <div class="d-flex col-12 col-lg-8 main-content slide-from-right animation pr-3 mb-4 mb-lg-0 order-1 order-lg-2">
+                            <h2 class="mb-3 text-center align-self-center">Kancelaria Adwokacka <span class="d-block">adwokat Agnieszka Padło</span></h2>
+                            <p>Jest to pierwsza strona stworzona przeze mnie, która znalazła się w Internecie. Została zrealizowana na prośbę mojej znajomej, Agnieszki.</p>
+                            <p>Witryna oparta jest głownie na Bootstrap 4, jest dostosowana do przeglądania na urządzeniach mobilnych oraz zawiera Mapy Google.</p>
+                            <p>Projekt pozwolił mi na przetarcie szlaków dotyczących rejestracji adresów www, działania hostingów oraz wyszukiwarki Google. Było to również ciekawe doświadczenie dotyczące rozmowy z Klientem.</p>
+                            <div class="row align-self-center">
+                                <a href="https://kancelaria-padlo.pl" class="text-center pr-3"  target="_blank">
+                                    <i class="fa fa-globe fa-2x"></i>
+                                    <p>Wersja Live</p>
+                                </a>
+                                <a href="https://github.com/michalOruba/kancelariaPadlo" class="text-center"  target="_blank">
+                                    <i class="fa fa-github fa-2x"></i>
+                                    <p>Wyświetl kod</p>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="main-container container">
-                        <div class="main-content slide-from-left">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti quaerat natus incidunt esse nisi labore. Ullam dolorum deserunt, reprehenderit accusantium debitis pariatur, quidem mollitia nobis veritatis voluptatibus ducimus eum porro fuga dicta optio, iste earum odio! Eos assumenda voluptatibus, omnis, voluptatum ab eum magni error a debitis placeat explicabo animi!</p>
+                    <div class="col-12 main-container container row order-2 mb-5">
+                        <div class="d-flex col-12 col-lg-8 main-content slide-from-right animation order-1 order-lg-1">
+                            <h2 class="mb-3 text-center align-self-center">YelpCamp</h2>
+                            <p>YelpCamp to aplikacja zrealizowana w ramach kursu online na stronie Udemy.com.</p>
+                            <p>Projekt przedstawia stronę z polami namiotowymi, które mogą być dodawane przez zarejestrowanych użytkowników. Na dostępne funkcjonalności składa się między innymi system komentarzy, ocen oraz powiadomień.</p>
+                            <p>Środowiskiem uruchomieniowym aplikacji jest Node.JS, a bazą danych MongoDB. Wykorzystane zostały również:</p>
+                            <ul>
+                                <li>framework Express,</li>
+                                <li>szablony EJS,</li>
+                                <li>modelowanie bazy danych za pomocą Mongoose,</li>
+                                <li>uwierzytelnianie: Passport,</li>
+                                <li>ścieżki RESTful,</li>
+                                <li>...</li>
+                            </ul>
+                            <p>Ciekawy i rozbudowany projekt, pozwalający na zebranie cennego doświadczenia z Node.JS, MongoDB, Express oraz udostępnieniem aplikacji w Internecie.</p>
+                            <div class="row align-self-center">
+                                <a href="https://michaloruba.pl/yelpcamp" class="text-center pr-3"  target="_blank">
+                                    <i class="fa fa-globe fa-2x"></i>
+                                    <p>Wersja Live</p>
+                                </a>
+                                <a href="https://github.com/michalOruba/yelpCamp" class="text-center"  target="_blank">
+                                    <i class="fa fa-github fa-2x"></i>
+                                    <p>Wyświetl kod</p>
+                                </a>
+                            </div>
                         </div>
-                        <div class="main-img slide-from-right pl-3">
-                            <img src="./assets/img/yelpcamp.JPG" alt="">
+                        <div id="project-img-2" class="col-lg-4 main-img slide-from-right animation pl-3 order-2 order-lg-2"></div>
+                    </div>
+                    <div class="col-12 main-container container row order-3 mb-5">
+                        <div id="project-img-3" class="col-12 col-lg-4 main-img slide-from-left animation order-2 order-lg-2"></div>
+                        <div class="d-flex col-12 col-lg-8 main-content slide-from-right animation pr-3 order-1 order-lg-2">
+                            <h2 class="mb-3 text-center align-self-center">Portfolio</h2>
+                            <p>Kolejnym projektem jest oglądane właśnie portfolio. Zbiera ono to, czego się nauczyłem i co zrobiłem od marca 2019 r.</p>
+                            <p>Strona została zbudowana przy pomocy układu flexbox, zastosowanego bezpośrednio w pliku SCSS, jak i poprzez odpowiednie klasy Bootstrap 4.</p>
+                            <p>Projekt zawiera kilka animacji oraz krótki skrypt do obsługi sekcji Umiejętności.</p>
+                            <p>Zachęcam do obejrzenia wszystkich stron oraz kodów źródłowych, a także do przesyłania opinii na ich temat na przedstawione dalej dane kontaktowe.</p>
+                            <div class="row align-self-center">
+                                <a href="https://michaloruba.pl" class="text-center pr-3"  target="_blank">
+                                    <i class="fa fa-globe fa-2x"></i>
+                                    <p>Wersja Live</p>
+                                </a>
+                                <a href="https://github.com/michalOruba/portfolioSite" class="text-center"  target="_blank">
+                                    <i class="fa fa-github fa-2x"></i>
+                                    <p>Wyświetl kod</p>
+                                </a>
+                            </div>
                         </div>
+                    </div>
+                    <div class="col-12 main-container container row order-4">
+                        <div class="d-flex col-12 col-lg-8 main-content slide-from-right animation order-1 order-lg-1">
+                            <h2 class="mb-3 text-center align-self-center">Niezbędnik Turystyczny<span class="d-block">(in progress)</span></h2>
+                            <p>Projekt, nad którym obecnie pracuję. Będzie to rozwinięcie mojej pracy dyplomowej, którą była aplikacja na smartfony z systemem Android, umożliwiająca wyznaczanie tras w górach, dodawanie na nich zagrożeń, wezwanie służb ratunkowych oraz kolekcjonowanie zdobytych szczytów.</p>
+                            <p>Aplikacja będzie pozwalać na obserwację dodanych przez użytkowników wydarzeń na szlakach, sprawdzanie własnych osiągnięć po zalogowaniu, oraz zarządzanie systemem przez administratora.</p>
+                            <p>Środowiskiem uruchomieniowym będzie Node.JS, frameworkiem Express, a bazą danych Firestore.</p>
+                            <p>Zapraszam w przyszłości do obejrzenia wyników prac.</p>
+                        </div>
+                        <div id="project-img-4" class="col-lg-4 main-img slide-from-right animation pl-3 order-2 order-lg-2"></div>
                     </div>
                 </section>
-                <section id="skills">
+                <section id="_skills">
+                    <h1 class="text-right pr-5">Umiejętności</h1>
+                    <hr class="style-two">
                     <div class="row">
-                        <div id="skill-container" class="col-md-5 row d-none d-lg-flex">
+                        <div id="skill-container" class="col-lg-5 row d-none d-lg-flex">
                             <p id="skill1" class="skill">NODE.JS</p>
                             <p id="skill2" class="skill">HTML/CSS</p>
                             <p id="skill3" class="skill">JAVASCRIPT</p>
@@ -79,22 +146,30 @@
                             <p id="skill5" class="skill">FIREBASE</p>
                             <p id="skill6" class="skill">ANDROID (JAVA)</p>
                         </div>
-                        <div id="skill-list-container" class="col-12 d-lg-none">
-                            <li id="list-skill1">NODE.JS</li>
-                            <li id="list-skill2">HTML/CSS</li>
-                            <li id="list-skill3">JAVASCRIPT</li>
-                            <li id="list-skill4">BAZY DANYCH</li>
-                            <li id="list-skill5">FIREBASE</li>
-                            <li id="list-skill6">ANDROID (JAVA)</li>
+                        <div id="skill-list-container" class="dropdown d-flex d-lg-none flex-column col-12 order-1">
+                            <button class="btn btn-secondary dropdown-toggle align-self-center mb-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                NODE.JS
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item active" id="list-skill1">NODE.JS</a>
+                                <a class="dropdown-item" id="list-skill2">HTML/CSS</a>
+                                <a class="dropdown-item" id="list-skill3">JAVASCRIPT</a>
+                                <a class="dropdown-item" id="list-skill4">BAZY DANYCH</a>
+                                <a class="dropdown-item" id="list-skill5">FIREBASE</a>
+                                <a class="dropdown-item" id="list-skill6">ANDROID (JAVA)</a>
+                            </div>
                         </div>
-                        <div id="skill-content" class="col-md-7">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur corrupti minus vel dignissimos quisquam eos?
+                        <div id="skill-content" class="col-lg-7 order-2">
+                                <p>Po raz pierwszy miałem styczność z Node.Js podczas kursu internetowego, którego produktem końcowym była aplikacja YelpCamp.</p>
+                                <p>Realizując projekt nauczyłem się obsługi aplikacji z poziomu serwera, instalacji pakietów, korzystania z frameworku Express, szablonowania EJS, obsługi bazy danych MongoDb przy pomocy Mongoose, uwierzytelniania dzięki Passport, czy tworzenia ścieżek RESTful.</p>
                         </div>
                     </div>
                 </section>
-                <section id="contact">
-                    <div class="row">
-                        <div class="col-md-5">
+                <section id="_contact" class="d-flex flex-column">
+                    <h1 class="text-right pr-5">Kontakt</h1>
+                    <hr class="style-two">
+                    <div id="contact-container" class="row align-items-center">
+                        <div class="col-lg-5 order-2 order-lg-1">
                             <div class="flex-column align-items-center">
                                 <p class="text-center"><i id="main-contact-icon" class="clickable fa fa-linkedin fa-2x p-2"></i></p>
                                 <div class="row justify-content-center">
@@ -103,10 +178,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="d-flex col-md-7 align-items-center justify-content-center">
-                            <p id="contact-content" class="text-center">
+                        <div id="contact-content-container" class="d-flex flex-column flex-lg-row col-lg-7 align-items-center justify-content-around order-1 order-lg-2">
+                            <p id="contact-content" class="text-center col-lg-8 align-self-center">
                                 Kliknij w odpowiednią ikonę, aby dowiedzieć się więcej.
                             </p>
+                            <div class="w-100 d-flex justify-content-center">
+                                <a tabindex="0" id="copy-button" class="btn mb-3 mr-lg-3 align-self-center" style="display: none;" data-toggle="popover" data-placement="top" data-content="Skopiowano!">Skopiuj</a>
+                            </div>
                         </div>
                     </div>
                 </section>
