@@ -63,7 +63,7 @@ const skillsDescription = {
 	}
 };
 
-// Defined skills for spread skills
+// Defined skills for spread
 let styles = [
 	{
 		top: (topSkillPosition + 30).toString() + '%',

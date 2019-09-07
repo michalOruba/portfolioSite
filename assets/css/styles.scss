@@ -1,6 +1,7 @@
-$text-color: #fff;
-$bg-color: #ffdab7;
+$text-white-color: #fff;
+$button-gray-color: #545b62;
 $link-color: #000;
+$background-black-color: #000;
 $left-skill-position: 36%;
 $top-skill-position: 40%;
 $portfolioImage: '../img/portfolio.jpg';
@@ -10,9 +11,6 @@ $portfolioImage: '../img/portfolio.jpg';
 	padding: 0;
 	font-family: 'Raleway', sans-serif;
 	font-weight: 400;
-}
-body {
-	background-color: $bg-color;
 }
 ul {
 	list-style: none;
@@ -30,10 +28,16 @@ p a {
 // Landing Section
 
 .landing {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	// display: none;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
 	position: relative;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
 	text-align: center;
 	min-height: 100vh;
@@ -44,7 +48,6 @@ p a {
 		height: 100%;
 		top: 0;
 		left: 0;
-		z-index: 0;
 		list-style: none;
 		margin: 0;
 		padding: 0;
@@ -58,25 +61,29 @@ p a {
 			background-position: 50% 50%;
 			background-repeat: no-repeat;
 			opacity: 0;
-			z-index: 0;
+			-webkit-animation: imageAnimation 50s linear infinite;
 			animation: imageAnimation 50s linear infinite;
 			&:nth-child(1) {
 				background-image: url(../img/IMG_1.jpg);
 			}
 			&:nth-child(2) {
 				background-image: url(../img/IMG_2.jpg);
+				-webkit-animation-delay: 10s;
 				animation-delay: 10s;
 			}
 			&:nth-child(3) {
 				background-image: url(../img/IMG_3.jpg);
+				-webkit-animation-delay: 20s;
 				animation-delay: 20s;
 			}
 			&:nth-child(4) {
 				background-image: url(../img/IMG_4.jpg);
+				-webkit-animation-delay: 30s;
 				animation-delay: 30s;
 			}
 			&:nth-child(5) {
 				background-image: url(../img/IMG_5.jpg);
+				-webkit-animation-delay: 40s;
 				animation-delay: 40s;
 			}
 		}
@@ -88,7 +95,7 @@ p a {
 			font-weight: 700;
 			text-transform: uppercase;
 			background-color: rgb(73, 73, 73);
-			color: $text-color;
+			color: $text-white-color;
 			opacity: 0.7;
 		}
 		&:hover {
@@ -100,10 +107,12 @@ p a {
 @keyframes imageAnimation {
 	0% {
 		opacity: 0;
+		-webkit-animation-timing-function: ease-in;
 		animation-timing-function: ease-in;
 	}
 	10% {
 		opacity: 1;
+		-webkit-animation-timing-function: ease-out;
 		animation-timing-function: ease-out;
 	}
 	20% {
@@ -120,9 +129,10 @@ p a {
 }
 
 .landing-content {
-	color: #fff;
+	color: $text-white-color;
 	opacity: 0;
 	margin-top: 100px;
+	-webkit-animation: 1s slidefade 3s forwards;
 	animation: 1s slidefade 3s forwards;
 	h1 {
 		font-weight: 700;
@@ -132,44 +142,46 @@ p a {
 		font-size: 24px;
 	}
 }
-@keyframes slidefade {
-	100% {
-		opacity: 1;
-		margin: 0;
-	}
-}
 
 // SideBar section
 
 div .sidebar {
-	background: #000000; /* fallback for old browsers */
-	background: -webkit-linear-gradient(to left, #434343, #000000); /* Chrome 10-25, Safari 5.1-6 */
+	background: $background-black-color; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #434343, $background-black-color); /* Chrome 10-25, Safari 5.1-6 */
 	background: linear-gradient(
 		to left,
 		#434343,
-		#000000
+		$background-black-color
 	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 	padding-top: 10vh;
+	position: -webkit-sticky;
 	position: sticky;
 	left: 0;
 	top: 0;
 	height: 100vh;
 	text-decoration: none;
-	color: $text-color;
+	color: $text-white-color;
 	nav {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
 		flex-direction: column;
 	}
 	a {
 		font-size: 1.3rem;
-		color: $text-color;
+		color: $text-white-color;
 		opacity: 0.75;
+		-webkit-transition: padding-left 0.5s;
+		-o-transition: padding-left 0.5s;
 		transition: padding-left 0.5s;
 		padding-bottom: 3vh;
 		&:hover {
 			text-decoration: none;
-			color: $text-color;
+			color: $text-white-color;
 			opacity: 1;
 			padding-left: 15px;
 		}
@@ -177,7 +189,7 @@ div .sidebar {
 }
 @media (max-width: 992px) {
 	div .sidebar {
-		background: #000000; /* fallback for old browsers */
+		background: $background-black-color;
 		height: auto;
 		margin: 0;
 		padding: 23px 0 0 0;
@@ -185,17 +197,23 @@ div .sidebar {
 		z-index: 2;
 		nav {
 			height: 30px;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
 			align-items: center;
+			-webkit-box-orient: horizontal;
+			-webkit-box-direction: normal;
+			-ms-flex-direction: row;
 			flex-direction: row;
+			-ms-flex-pack: distribute;
 			justify-content: space-around;
-			background-color: #000;
+			background-color: $background-black-color;
 		}
 		a {
-			color: #fff;
+			color: $text-white-color;
 			font-size: 1rem;
 			&:hover {
 				text-decoration: none;
-				color: #fff;
+				color: $text-white-color;
 				padding-left: 0px;
 			}
 		}
@@ -222,14 +240,9 @@ div .sidebar {
 }
 #project-img-3 {
 	background-image: url(../img/portfolio.jpg);
-	transition: background-image 1s ease-in-out;
-	&:hover {
-		background-image: url(../img/IMG_ME.jpg);
-	}
 }
 #project-img-4 {
 	background-image: url(https://source.unsplash.com/QBLq7dY0uo8);
-	transition: background-image 1s ease-in-out;
 }
 #_projects {
 	margin-top: 15vh;
@@ -249,25 +262,43 @@ div .sidebar {
 	i {
 		text-align: center;
 		background-color: #fff;
-		color: #000; // opacity: 0;
+		color: $background-black-color;
 	}
 }
 .main-container {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	width: 70vw;
 	height: 70vh;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
+	-ms-flex-wrap: nowrap;
 	flex-wrap: nowrap;
 	.main-content {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
 		flex-direction: column;
+		-webkit-box-align: start;
+		-ms-flex-align: start;
 		align-items: start;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
 		justify-content: center;
 		padding: 20px;
 		opacity: 0;
 	}
 	.main-img {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
 		align-items: center;
 		z-index: 0;
 		border-radius: 4%;
@@ -279,13 +310,11 @@ div .sidebar {
 		background-repeat: no-repeat;
 	}
 }
-.slide-from-right {
-	margin-top: 100px;
-}
-.slide-from-left {
+.slide-from-bottom {
 	margin-top: 100px;
 }
 .animation.animate {
+	-webkit-animation: 1s slidefade 0.5s forwards;
 	animation: 1s slidefade 0.5s forwards;
 }
 // Skills section
@@ -294,24 +323,33 @@ div .sidebar {
 }
 .skill {
 	text-align: center;
-	color: #fff;
+	color: $text-white-color;
 	position: absolute;
 	height: 20vh;
 	width: 20vh;
 	border-radius: 50%;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
-	background: #000000;
+	background: $background-black-color;
 	cursor: pointer;
 	/* fallback for old browsers */
-	background: -webkit-linear-gradient(to left, #5e5d5d, #000000); /* Chrome 10-25, Safari 5.1-6 */
+	/* Chrome 10-25, Safari 5.1-6 */
+	background: -webkit-gradient(linear, right top, left top, from(#5e5d5d), to($background-black-color));
+	background: -o-linear-gradient(right, #5e5d5d, $background-black-color);
 	background: linear-gradient(
 		to left,
 		#5e5d5d,
-		#000000
+		$background-black-color
 	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	border: 1px solid black;
+	-webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
 	&:hover {
 		-webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
@@ -319,18 +357,31 @@ div .sidebar {
 		box-shadow: inset 0px 0px 5px #c1c1c1;
 	}
 }
-a.dropdown-item.active,
-a.dropdown-item:active {
-	background-color: #545b62;
-}
-a.dropdown-item:hover {
-	background-color: #545b62;
-	opacity: 0.9;
-	color: #fff;
+div.dropdown-menu {
+	a.dropdown-item {
+		&.active,
+		:active {
+			background-color: $button-gray-color;
+			color: $text-white-color;
+		}
+		&:hover {
+			background-color: $button-gray-color;
+			opacity: 0.9;
+			color: $text-white-color;
+			cursor: pointer;
+		}
+	}
 }
 #skill-content {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
 }
 #skill-container {
@@ -374,8 +425,6 @@ a.dropdown-item:hover {
 		text-decoration: none;
 	}
 }
-// #contact-container {
-// }
 #contact-content-container {
 	height: 30vh;
 }
@@ -404,5 +453,20 @@ hr.style-two {
 	color: black;
 	border: 0;
 	height: 1px;
+	background-image: -webkit-gradient(
+		linear,
+		left top,
+		right top,
+		from(rgba(0, 0, 0, 0)),
+		color-stop(rgba(0, 0, 0, 0.75)),
+		to(rgba(0, 0, 0, 0))
+	);
+	background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+@keyframes slidefade {
+	100% {
+		opacity: 1;
+		margin: 0;
+	}
 }
